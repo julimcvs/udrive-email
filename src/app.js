@@ -35,9 +35,10 @@ async function run(req) {
     return mailSent;
 }
 
-app.post('/mail-validation', function (req, res) {
+app.post('/mail-validation', async function (req, res) {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.write(JSON.stringify(run(req)));
+    const mailSent = await run(req);
+    res.write(JSON.stringify(mailSent));
     res.end();
 })
 

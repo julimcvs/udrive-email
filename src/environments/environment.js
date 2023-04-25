@@ -1,3 +1,5 @@
 module.exports  = {
-  password: "yhpnrrpzjhuuubit"
+  password: "yhpnrrpzjhuuubit",
+  templateServiceHost: "localhost",
+  templateServicePort: "3100"
 };

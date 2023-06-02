@@ -28,7 +28,7 @@ async function getTemplate(mailContent) {
         let template;
         const data = JSON.stringify({
             name: mailContent.name,
-            tokenUrl: mailContent.tokenUrl
+            password: mailContent.password
         });
         const options = {
             hostname: ENVIRONMENT.templateServiceHost,
